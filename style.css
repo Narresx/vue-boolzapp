@@ -1,0 +1,4 @@
+.my-background{
+    background: linear-gradient( rgb(0,150,136) 15%, rgb(218,219,213) 15% 100%);
+    height: 500px; /* da togliere, solo per vederlo*/
+}
