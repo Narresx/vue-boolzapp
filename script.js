@@ -16,19 +16,19 @@ const root = new Vue({
         contacts: [
             {
                 name: 'Michele',
-                avatar: '_1',
+                avatar: 'img/avatar_1.jpg',
             },
             {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: 'img/avatar_2.jpg',
             },
             {
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: 'img/avatar_3.jpg',
             },
             {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: 'img/avatar_4.jpg',
             },
         ]
     }
