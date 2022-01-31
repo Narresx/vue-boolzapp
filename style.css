@@ -13,10 +13,6 @@ img{
     height: auto;
 }
 
-.float-left{
-    float: left;
-}
-
 .bell-backround{
     border-radius: 50%;
     background-color: rgb(242,251,255);
@@ -32,3 +28,4 @@ img{
 .centered-text{
     line-height: 50px;
 }
+
