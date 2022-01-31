@@ -16,3 +16,19 @@ img{
 .float-left{
     float: left;
 }
+
+.bell-backround{
+    border-radius: 50%;
+    background-color: rgb(242,251,255);
+    width: 50px;
+    height: 50px;
+}
+
+.centered-icon{
+    position: absolute;
+    transform: translate( 100%, 50%);
+}
+
+.centered-text{
+    line-height: 50px;
+}
