@@ -1,6 +1,23 @@
+.my-container{
+    margin-top: 20px;
+    width: auto;
+    height: 600px;
+    overflow: scroll;
+}
+
+.container-chat{
+    margin-top: 20px;
+    max-width: 800px;
+    height: 600px;
+}
+
 .my-background{
     background: linear-gradient( rgb(0,150,136) 15%, rgb(218,219,213) 15% 100%);
     height: 100vh;
+}
+
+.my-background-img{
+    background-image: url(./img/mine.jpg);
 }
 
 main{
@@ -29,3 +46,10 @@ img{
     line-height: 50px;
 }
 
+.my-message{
+    background-color: rgb(213,249,186);
+}
+
+.answer-message{
+    background-color: white;
+}
