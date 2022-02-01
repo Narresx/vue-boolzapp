@@ -96,20 +96,20 @@ const root = new Vue({
                 ],
             },
         ],
+    },
 
-        methods: {
+    methods: {
 
-            isActive(index) {
-                if (index === this.currentIndex) {
-                    return true;
-                } else {
-                    return false;
-                }
-            },
-
-            selectUser(index) {
-                this.currentIndex = index;
+        isActive(index) {
+            if (index === this.currentIndex) {
+                return true;
+            } else {
+                return false;
             }
+        },
+
+        selectUser(index) {
+            this.currentIndex = index;
         }
     }
 

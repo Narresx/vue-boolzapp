@@ -66,14 +66,13 @@
                 </div>
                 <div class="col-8 p-0 base-backgrond d-flex flex-column">
                     <div class="mt-2">
-                        <div v-for="(contact, index) in contacts" v-if="currentIndex === index"
-                            class=" row align-items-center">
+                        <div class=" row align-items-center">
                             <!-- Utente con cui si sta chattando attualmente -->
                             <div class="col-1">
-                                <img :src="contact.avatar">
+                                <img :src="contacts[currentIndex].avatar">
                             </div>
                             <div class="col-9">
-                                <div>{{contact.name}}</div>
+                                <div>{{contacts[currentIndex].name}}</div>
                                 <div>Ultimo accesso oggi alle </div>
                             </div>
                             <div class="col-2 ps-5">
@@ -94,8 +93,9 @@
                                 mangiare!
                             </div>
                         </div>
-                        <div class="d-flex justify-content-start  my-3">
-                            <div class="badge rounded-pill answer-message text-dark p-3">Tutto fatto!
+                        <div v-for="(message, index) in contacts[currentIndex].messages"
+                            class="d-flex justify-content-start  my-3">
+                            <div class="badge rounded-pill answer-message text-dark p-3">{{message.text}}
                             </div>
                         </div>
                     </div>
