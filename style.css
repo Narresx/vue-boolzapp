@@ -7,7 +7,7 @@
 
 .container-chat{
     margin-top: 20px;
-    max-width: 800px;
+    max-width: auto;
     height: 700px;
 }
 
