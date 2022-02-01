@@ -28,7 +28,7 @@ const root = new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: 'img/avatar_4.jpg',
+                avatar: 'img/avatar_io.jpg',
             },
         ]
     }

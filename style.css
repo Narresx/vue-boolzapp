@@ -10,6 +10,7 @@ k.my-container{
     margin-right: -20px;
     max-width: auto;
     height: 700px;
+    overflow-y: scroll ;
 }
 
 .my-background{
@@ -48,12 +49,12 @@ img{
 }
 
 .my-message{
-    /*flex-direction: end;*/
+    flex-direction: flex-end;
     background-color: rgb(213,249,186);
 }
 
 .answer-message{
-    /* flex-direction: flex; */
+    flex-direction: flex-start; 
     background-color: white;
 }
 
