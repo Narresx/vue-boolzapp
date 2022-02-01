@@ -12,8 +12,6 @@ const root = new Vue({
 
         userMessage: '',
 
-        myMessages: [],
-
         user: {
             name: 'Antonio',
             avatar: 'img/avatar_8.jpg'
@@ -104,11 +102,11 @@ const root = new Vue({
 
     methods: {
 
-        isActive(index) {
-            if (index === this.currentIndex) {
-                return true;
+        StatusMessage() {
+            if (this.status === 'received') {
+                return 'answer-message';
             } else {
-                return false;
+                return 'my-message';
             }
         },
 
@@ -117,9 +115,8 @@ const root = new Vue({
         },
 
         addMessage() {
-            const userMessage = this.userMessage;
-            if (this.userMessage) {
-                this.myMessages.push({ text: userMessage, });
+            if (this.userMessage.trim() != "") {
+                this.contacts[this.currentIndex].messages.push({ date: '10/01/2020 15:30:55', text: this.userMessage, status: 'sent', });
                 this.userMessage = '';
             }
         },

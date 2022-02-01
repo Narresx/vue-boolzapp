@@ -84,23 +84,10 @@
                     </div>
                     <!-- Qui devo controllare i messaggi -->
                     <div class=" p-3 flex-grow-1 my-background-img">
-                        <div class="d-flex justify-content-end my-3">
-                            <div class="badge rounded-pill my-message text-dark p-3">Hai portato a spasso il cane?
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end  my-3">
-                            <div class="badge rounded-pill my-message text-dark p-3">Ricordati di dargli da
-                                mangiare!
-                            </div>
-                        </div>
                         <div v-for="(message, index) in contacts[currentIndex].messages"
                             class="d-flex justify-content-start  my-3">
-                            <div class="badge rounded-pill answer-message text-dark p-3">{{message.text}}
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end  my-3">
-                            <div class="badge rounded-pill my-message text-dark p-3">Ricordati di dargli da
-                                mangiare!
+                            <div :class="StatusMessage()" class="badge rounded-pill text-dark p-3">
+                                {{message.text}}
                             </div>
                         </div>
                     </div>
@@ -111,10 +98,8 @@
                                 <i class="bi bi-emoji-smile"></i>
                             </div>
                             <div class="col-10">
-                                <form class="">
-                                    <input @keyup.enter="addMessage()" class="form-control" type="search"
-                                        placeholder="Scrivi un messaggio">
-                                </form>
+                                <input v-model="userMessage" @keyup.enter="addMessage" class="form-control"
+                                    type="search" placeholder="Scrivi un messaggio">
                             </div>
                             <div class="col-1">
                                 <i class="bi bi-mic-fill"></i>
