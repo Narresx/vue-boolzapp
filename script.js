@@ -8,6 +8,8 @@ const root = new Vue({
 
     data: {
 
+        currentIndex: 0,
+
         user: {
             name: 'Antonio',
             avatar: 'img/avatar_8.jpg'
@@ -94,6 +96,21 @@ const root = new Vue({
                 ],
             },
         ],
+
+        methods: {
+
+            isActive(index) {
+                if (index === this.currentIndex) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+
+            selectUser(index) {
+                this.currentIndex = index;
+            }
+        }
     }
 
 });

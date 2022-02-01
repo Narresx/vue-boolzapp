@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-10">
                                 <div>Ricevi notifiche di nuovi messaggi</div>
-                                <div>Attiva notifiche desktop</div>
+                                <div class="text-decoration-underline">Attiva notifiche desktop</div>
                             </div>
                         </div>
                     </div>
@@ -56,8 +56,8 @@
                     </div>
                     <div class=" bg-white">
                         <div class="row justify-content-between align-items-center overflow-auto">
-                            <!-- parte dinamica-->
-                            <div v-for="(contact, index) in contacts" class="col-12 d-flex">
+                            <!-- parte dinamica contatti -->
+                            <div v-for="(contact, index) in contacts" @click="selectUser(index)" class="col-12 d-flex">
                                 <img class="mt-2" :src="contact.avatar">
                                 <div class="centered-text ps-2 mt-2">{{ contact.name }}</div>
                             </div>
@@ -66,13 +66,14 @@
                 </div>
                 <div class="col-8 p-0 base-backgrond d-flex flex-column">
                     <div class="mt-2">
-                        <div class="row align-items-center">
+                        <div v-for="(contact, index) in contacts" v-if="currentIndex === index"
+                            class=" row align-items-center">
                             <!-- Utente con cui si sta chattando attualmente -->
                             <div class="col-1">
                                 <img src="./img/avatar_1.jpg">
                             </div>
                             <div class="col-9">
-                                <div>Pippo</div>
+                                <div>{{contact.name}}</div>
                                 <div>Ultimo accesso oggi alle </div>
                             </div>
                             <div class="col-2 ps-5">
@@ -82,6 +83,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Qui devo controllare i messaggi -->
                     <div class=" p-3 flex-grow-1 my-background-img">
                         <div class="d-flex justify-content-end my-3">
                             <div class="badge rounded-pill my-message text-dark p-3">Hai portato a spasso il cane?
