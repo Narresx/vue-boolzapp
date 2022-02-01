@@ -10,6 +10,10 @@ const root = new Vue({
 
         currentIndex: 0,
 
+        userMessage: '',
+
+        myMessages: [],
+
         user: {
             name: 'Antonio',
             avatar: 'img/avatar_8.jpg'
@@ -110,7 +114,15 @@ const root = new Vue({
 
         selectUser(index) {
             this.currentIndex = index;
-        }
+        },
+
+        addMessage() {
+            const userMessage = this.userMessage;
+            if (this.userMessage) {
+                this.myMessages.push({ text: userMessage, });
+                this.userMessage = '';
+            }
+        },
     }
 
 });
