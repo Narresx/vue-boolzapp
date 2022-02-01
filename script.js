@@ -9,8 +9,8 @@ const root = new Vue({
     data: {
 
         user: {
-            name: 'Nome Utente',
-            avatar: '_io'
+            name: 'Antonio',
+            avatar: 'img/avatar_8.jpg'
         },
 
         contacts: [

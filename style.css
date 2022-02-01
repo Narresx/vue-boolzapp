@@ -1,4 +1,4 @@
-.my-container{
+k.my-container{
     margin-top: 20px;
     width: auto;
     height: 600px;
@@ -7,6 +7,7 @@
 
 .container-chat{
     margin-top: 20px;
+    margin-right: -20px;
     max-width: auto;
     height: 700px;
 }
@@ -47,10 +48,12 @@ img{
 }
 
 .my-message{
+    /*flex-direction: end;*/
     background-color: rgb(213,249,186);
 }
 
 .answer-message{
+    /* flex-direction: flex; */
     background-color: white;
 }
 
