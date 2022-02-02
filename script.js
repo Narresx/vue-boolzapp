@@ -124,9 +124,19 @@ const root = new Vue({
 
         isSearched(contact) {
             //se ciò che si scrive nella barra di ricerca è contenuto tra i miei contatti (vero o falso)
-            if (capitalizeFirstLetter(this.userSearch).trim().includes(contact.name)) return true;
-            else return false;
-        }
+            if (capitalizeFirstLetter(this.userSearch).trim().includes(contact.name)) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+
+        // Funzione non usata
+        toggleVisibleStatus(index) {
+            if (this.contact[index].visible === true) {
+                this.contact[index].visible = false;
+            } else this.contact[index].visible = true;
+        },
     }
 
 });
