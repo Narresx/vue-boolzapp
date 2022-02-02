@@ -60,7 +60,8 @@
                     <div class=" bg-white">
                         <div class="row justify-content-between align-items-center overflow-auto">
                             <!-- parte dinamica contatti -->
-                            <div v-for="(contact, index) in contacts" @click="selectUser(index)" class="col-12 d-flex">
+                            <div v-for="(contact, index) in contacts" v-if="isSearched(contact)"
+                                @click="selectUser(index)" class="col-12 d-flex">
                                 <img class="mt-2" :src="`img/avatar${contact.avatar}.jpg`">
                                 <div class="centered-text ps-2 mt-2">{{ contact.name }}</div>
                             </div>

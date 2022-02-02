@@ -121,6 +121,12 @@ const root = new Vue({
                 this.contacts[this.currentIndex].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: 'Ok', status: 'received', });
             }, 1000)
         },
+
+        isSearched(contact) {
+            //se ciò che si scrive nella barra di ricerca è contenuto tra i miei contatti (vero o falso)
+            if (this.userSearch.includes(contact.name)) return true;
+            else return false;
+        }
     }
 
 });
