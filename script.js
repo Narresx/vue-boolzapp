@@ -111,6 +111,9 @@ const root = new Vue({
                 this.contacts[this.currentIndex].messages.push({ date: '10/01/2020 15:30:55', text: this.userMessage, status: 'sent', });
                 this.userMessage = '';
             }
+            setTimeout(() => {
+                this.contacts[this.currentIndex].messages.push({ date: '10/01/2020 15:30:55', text: 'ok', status: 'received', });
+            }, 1000)
         },
     }
 
