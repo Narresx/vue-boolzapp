@@ -50,3 +50,12 @@ img{
     margin-left: -12px;
     margin-right: -20px;
 }
+
+.date-customise{
+    text-align: right;
+    font-size: 0.7rem;
+}
+
+.text-customise{
+    text-align: left;
+}

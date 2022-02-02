@@ -2,11 +2,15 @@ console.log('JS OK', Vue);
 
 Vue.config.devtools = true;
 
+dayjs.extend(dayjs_plugin_customParseFormat); //inizializzo il plugin  ParseFormat
+
 const root = new Vue({
 
     el: '#root',
 
     data: {
+
+        lastAccess: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 
         currentIndex: 0,
 
@@ -108,11 +112,11 @@ const root = new Vue({
 
         addMessage() {
             if (this.userMessage.trim() != "") {
-                this.contacts[this.currentIndex].messages.push({ date: '10/01/2020 15:30:55', text: this.userMessage, status: 'sent', });
+                this.contacts[this.currentIndex].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: this.userMessage, status: 'sent', });
                 this.userMessage = '';
             }
             setTimeout(() => {
-                this.contacts[this.currentIndex].messages.push({ date: '10/01/2020 15:30:55', text: 'ok', status: 'received', });
+                this.contacts[this.currentIndex].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: 'ok', status: 'received', });
             }, 1000)
         },
     }
