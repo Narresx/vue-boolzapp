@@ -16,6 +16,8 @@ const root = new Vue({
 
         userMessage: '',
 
+        userSearch: '',
+
         user: {
             name: 'Antonio',
             avatar: '_8'
@@ -116,7 +118,7 @@ const root = new Vue({
                 this.userMessage = '';
             }
             setTimeout(() => {
-                this.contacts[this.currentIndex].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: 'ok', status: 'received', });
+                this.contacts[this.currentIndex].messages.push({ date: dayjs().format('DD/MM/YYYY HH:mm:ss'), text: 'Ok', status: 'received', });
             }, 1000)
         },
     }
