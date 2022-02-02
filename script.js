@@ -124,9 +124,15 @@ const root = new Vue({
 
         isSearched(contact) {
             //se ciò che si scrive nella barra di ricerca è contenuto tra i miei contatti (vero o falso)
-            if (this.userSearch.includes(contact.name)) return true;
+            if (capitalizeFirstLetter(this.userSearch).includes(contact.name)) return true;
             else return false;
         }
     }
 
 });
+
+// Functions
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
