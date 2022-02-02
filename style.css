@@ -35,10 +35,12 @@ img{
 
 .my-message{
     background-color: rgb(213,249,186);
+    align-items: flex-end;
 }
 
 .answer-message{
     background-color: white;
+    justify-content: flex-start;
 }
 
 .base-backgrond{

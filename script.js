@@ -102,14 +102,6 @@ const root = new Vue({
 
     methods: {
 
-        StatusMessage() {
-            if (this.contacts[this.currentIndex].status === "sent") {
-                return 'answer-message';
-            } else {
-                return 'my-message';
-            }
-        },
-
         selectUser(index) {
             this.currentIndex = index;
         },
