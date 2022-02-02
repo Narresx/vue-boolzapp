@@ -14,13 +14,13 @@ const root = new Vue({
 
         user: {
             name: 'Antonio',
-            avatar: 'img/avatar_8.jpg'
+            avatar: '_8'
         },
 
         contacts: [
             {
                 name: 'Michele',
-                avatar: 'img/avatar_1.jpg',
+                avatar: '_1',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -41,7 +41,7 @@ const root = new Vue({
             },
             {
                 name: 'Fabio',
-                avatar: 'img/avatar_2.jpg',
+                avatar: '_2',
                 visible: true,
                 messages: [{
                     date: '20/03/2020 16:30:00',
@@ -62,7 +62,7 @@ const root = new Vue({
             },
             {
                 name: 'Samuele',
-                avatar: 'img/avatar_3.jpg',
+                avatar: '_3',
                 visible: true,
                 messages: [{
                     date: '28/03/2020 10:10:40',
@@ -83,7 +83,7 @@ const root = new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: 'img/avatar_io.jpg',
+                avatar: '_io',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -103,7 +103,7 @@ const root = new Vue({
     methods: {
 
         StatusMessage() {
-            if (this.status === 'received') {
+            if (this.contacts[this.currentIndex].status === "sent") {
                 return 'answer-message';
             } else {
                 return 'my-message';
