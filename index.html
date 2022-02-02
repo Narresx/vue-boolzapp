@@ -84,8 +84,9 @@
                     </div>
                     <!-- Qui devo controllare i messaggi -->
                     <div class=" p-3 flex-grow-1 my-background-img">
-                        <div v-for="(message, index) in contacts[currentIndex].messages" class=" row flex-column my-3">
-                            <div :class="message.status === 'sent' ? 'my-message' : 'answer-message'"
+                        <div v-for="(message, index) in contacts[currentIndex].messages"
+                            class="row my-3 px-3 flex-column">
+                            <div :class="message.status === 'sent' ? 'my-message align-self-end' : 'answer-message align-self-start'"
                                 class="badge col-4 rounded-pill text-dark p-3">
                                 {{message.text}}
                             </div>
